@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: url(https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: monospace;
+    
+}
+h1{
+    font-size: 160px;
+    font-weight: 200;
+    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+    background-image: linear-gradient(to right, white, black);
+    padding: 30px 70px;
+    min-width: 800px;
+     text-anchor: center;
+     position: relative;
+}
+
+h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, white, black);
+    z-index: -1;
+    box-shadow: -25px 25px 90px black, 25px -25px 90px white;
+    opacity: 70%;
+    animation: efekt 3s linear infinite;
+}
+@keyframes efekt {
+    0%, 100%{
+        box-shadow: -25px 25px 90px black, 25px -25px 90px white;
+    }
+   20%{
+        box-shadow: -25px 25px 90px white, 25px -25px 90px black;
+    40%{
+        box-shadow: -25px 25px 90px black, 25px -25px 90px white;
+    60%{
+        box-shadow: -25px 25px 90px white, 25px -25px 90px black;
+    80%{
+        box-shadow: -25px 25px 90px black, 25px -25px 90px white;
+    }
+}
+
+h1::after{
+    content: '';
+    position: absolute;
+    width: 98%;
+    height: 94%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 3%;
+    background-color: #222;
+    z-index: -1;
+}
